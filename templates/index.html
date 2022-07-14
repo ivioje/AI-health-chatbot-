@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatbot</title>
+</head>
+
+<body>
+    <div class="fill"></div>
+    <section>
+        <nav>
+            <a href="/" class="logo">ALICE</a>
+        </nav>
+        <header>
+            <div class="intro">
+                <h1>AI powered chatbot</h1>
+                <p>Alice is a conversational mental health chatbot. Freely chat with her on any subject relating to mental health.</p>
+                <div class="chatbox__button">
+                    <a href="#chatbot"> <button>Start chat</button></a>
+                </div>
+            </div>
+        </header>
+    <div class="container" id="chatbot">
+        <div class="chatbox" >
+            <br><br>
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png"
+                            alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Alice. Mental health support.</h4>
+                        <p class="chatbox__description--header">Anxiety, schizophrenia disorders, phobias, etc.</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+                <div class="close__chat">
+                    <a href="/"> <button>Close chat</button></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </section>
+    <footer>
+        <p>All rights reserved. 2022</p>
+    </footer>
+
+    <script>
+        $SCRIPT_ROOT = '{{ request.script_root|tojson }}'
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+
+</body>
+
+</html>
