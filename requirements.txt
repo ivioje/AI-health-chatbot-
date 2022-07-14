@@ -2,5 +2,5 @@ Flask==2.1.0
 gunicorn==20.1.0
 nltk==3.7
 numpy==1.21.6
-regex==2022.4.24
+# regex==2022.4.24
 torch==1.11.0
